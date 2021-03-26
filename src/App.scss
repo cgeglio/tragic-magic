@@ -1,0 +1,16 @@
+.App {
+  align-items: center;
+  background-color: #4417ff;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bungee Shade", sans-serif;
+  font-size: 80px;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+
+  header {
+    margin-bottom: 20px;
+  }
+}
