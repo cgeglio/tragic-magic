@@ -1,16 +1,22 @@
 .App {
   align-items: center;
-  background-color: #4417ff;
+  background-color: black;
   color: white;
   display: flex;
   flex-direction: column;
-  font-family: "Bungee Shade", sans-serif;
   font-size: 80px;
   height: 100vh;
   justify-content: center;
   text-align: center;
 
   header {
+    font-family: "Bungee Shade", sans-serif;
     margin-bottom: 20px;
+  }
+
+  .coming-soon {
+    font-family: "Comfortaa", sans-serif;
+    font-size: 60px;
+    margin-top: 20px;
   }
 }
