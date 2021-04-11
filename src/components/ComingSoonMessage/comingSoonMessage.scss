@@ -16,3 +16,15 @@
     margin-top: 20px;
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .coming-soon-message-container {
+    header {
+      font-size: 50px;
+    }
+
+    .coming-soon {
+      font-size: 40px;
+    }
+  }
+}
