@@ -19,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "prepare": "husky install",
+    "format": "prettier --write \"src/**/*.{js,jsx, scss}\""
   },
   "eslintConfig": {
     "extends": [
@@ -41,7 +43,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cgeglio/tragic-magic.git"
@@ -51,5 +52,27 @@
   "bugs": {
     "url": "https://github.com/cgeglio/tragic-magic/issues"
   },
-  "homepage": "https://tragicmagic.org"
+  "homepage": "https://tragicmagic.org",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.2",
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": [
+      "prettier --write",
+      "eslint --fix src/",
+      "git add"
+    ]
+  }
 }
