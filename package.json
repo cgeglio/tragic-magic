@@ -21,7 +21,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/",
     "prepare": "husky install",
-    "format": "prettier-eslint --write \"src/**/*.{js,jsx, scss}\""
+    "format": "prettier-eslint --write \"src/**/*.{js,jsx,json,css,scss}\""
   },
   "eslintConfig": {
     "extends": [
@@ -71,9 +71,8 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,json,css,scss}": [
-      "prettier --write",
-      "eslint --fix src/",
+    "src/**/*.{js,jsx,json,css,scss}": [
+      "prettier-eslint --write",
       "git add"
     ]
   }
