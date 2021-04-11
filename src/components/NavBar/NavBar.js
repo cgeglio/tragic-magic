@@ -1,24 +1,41 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
+import Hamburger from "react-hamburgers";
 import "./navBar.scss";
 
 export default function NavBar() {
-  return (
-    <nav>
-      <ul>
-        <li>
+  const [isActive, setIsActive] = React.useState(false);
+
+  const renderMenu = () => {
+    return (
+      <nav>
+        <div className="nav-item">
           <Link to="/">Home</Link>
-        </li>
-        <li>
+        </div>
+        <div className="nav-item">
           <Link to="/embroidery">Embroidery</Link>
-        </li>
-        <li>
+        </div>
+        <div className="nav-item">
           <Link to="/illustration">Illustration</Link>
-        </li>
-        <li>
+        </div>
+        <div className="nav-item">
           <Link to="/about">About</Link>
-        </li>
-      </ul>
-    </nav>
+        </div>
+      </nav>
+    );
+  };
+
+  return isMobile ? (
+    <>
+      <Hamburger
+        active={isActive}
+        type="squeeze"
+        onClick={() => setIsActive((prev) => !prev)}
+      />
+      {isActive && renderMenu()}
+    </>
+  ) : (
+    renderMenu()
   );
 }
