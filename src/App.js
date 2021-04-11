@@ -1,6 +1,7 @@
-import "./App.scss";
+import React from "react";
 import NavBar from "./components/NavBar";
 import AppSwitch from "./AppSwitch";
+import "./App.scss";
 
 function App() {
   return (

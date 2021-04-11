@@ -1,3 +1,4 @@
+import React from "react";
 import "./illustration.scss";
 
 export default function Illustration() {

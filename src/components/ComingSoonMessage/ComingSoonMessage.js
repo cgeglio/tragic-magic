@@ -1,3 +1,4 @@
+import React from "react";
 import crystal from "../../images/crystal.png";
 import "./comingSoonMessage.scss";
 
