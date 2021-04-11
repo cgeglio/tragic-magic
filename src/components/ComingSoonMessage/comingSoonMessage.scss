@@ -1,0 +1,18 @@
+.coming-soon-message-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  header {
+    font-family: "Bungee Shade", sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+  }
+
+  .coming-soon {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+}
