@@ -1,3 +1,4 @@
+import React from "react";
 import "./embroidery.scss";
 
 export default function Embroidery() {

@@ -1,3 +1,4 @@
+import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import About from "./components/About";
 import Embroidery from "./components/Embroidery";
