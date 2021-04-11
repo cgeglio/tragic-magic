@@ -1,22 +1,7 @@
-.App {
-  align-items: center;
+body {
   background-color: black;
   color: white;
-  display: flex;
-  flex-direction: column;
-  font-size: 80px;
-  height: 100vh;
-  justify-content: center;
-  text-align: center;
-
-  header {
-    font-family: "Bungee Shade", sans-serif;
-    margin-bottom: 20px;
-  }
-
-  .coming-soon {
-    font-family: "Comfortaa", sans-serif;
-    font-size: 60px;
-    margin-top: 20px;
-  }
+  font-family: "Comfortaa", sans-serif !important;
+  margin: 0px;
+  padding: 0px;
 }
