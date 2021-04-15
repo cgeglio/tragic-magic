@@ -7,20 +7,29 @@ import "./navBar.scss";
 export default function NavBar() {
   const [isActive, setIsActive] = React.useState(false);
 
+  const toggleIsActive = () => setIsActive((prev) => !prev);
+
   const renderMenu = () => {
     return (
-      <nav>
-        <div className="nav-item">
-          <Link to="/">Home</Link>
-        </div>
-        <div className="nav-item">
-          <Link to="/embroidery">Embroidery</Link>
-        </div>
-        <div className="nav-item">
-          <Link to="/illustration">Illustration</Link>
-        </div>
-        <div className="nav-item">
-          <Link to="/about">About</Link>
+      <nav onClick={toggleIsActive}>
+        {!isMobile && (
+          <div className="nav-item app-name">
+            <Link to="/">Tragic Magic</Link>
+          </div>
+        )}
+        <div className="nav-items">
+          <div className="nav-item">
+            <Link to="/">Home</Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/about">About</Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/embroidery">Embroidery</Link>
+          </div>
+          <div className="nav-item">
+            <Link to="/illustration">Illustration</Link>
+          </div>
         </div>
       </nav>
     );
@@ -28,11 +37,12 @@ export default function NavBar() {
 
   return isMobile ? (
     <>
-      <Hamburger
-        active={isActive}
-        type="squeeze"
-        onClick={() => setIsActive((prev) => !prev)}
-      />
+      <div className="mobile-nav-container">
+        <div className="nav-item app-name">
+          <Link to="/">Tragic Magic</Link>
+        </div>
+        <Hamburger active={isActive} type="squeeze" onClick={toggleIsActive} />
+      </div>
       {isActive && renderMenu()}
     </>
   ) : (
