@@ -3,10 +3,6 @@ import PropTypes from "prop-types";
 import cardBack from "../../images/cardBack.jpeg";
 import "./card.scss";
 
-Card.propTypes = {
-  card: PropTypes.object,
-};
-
 export default function Card({ card }) {
   const [isVisible, setIsVisible] = React.useState(false);
   return (
@@ -14,7 +10,7 @@ export default function Card({ card }) {
       <div className="flip-card-inner">
         <img
           style={{ opacity: isVisible ? "0.1" : 1 }}
-          src={process.env.PUBLIC_URL + `/cardAssets/${card.name_short}.jpg`}
+          src={`${process.env.PUBLIC_URL}/cardAssets/${card.name_short}.jpg`}
           alt={card.name}
           className="flip-card-back"
           onMouseOver={() => setIsVisible(true)}
@@ -38,3 +34,7 @@ export default function Card({ card }) {
     </div>
   );
 }
+
+Card.propTypes = {
+  card: PropTypes.object,
+};

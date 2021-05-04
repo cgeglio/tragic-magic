@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import AppSwitch from "./AppSwitch";
-import { ReadingContext } from "./contexts/ReadingContext";
+import ReadingContext from "./contexts/ReadingContext";
 import "./App.scss";
 
 function App() {

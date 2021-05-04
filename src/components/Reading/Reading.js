@@ -1,8 +1,8 @@
 import React from "react";
-import { ReadingContext } from "../../contexts/ReadingContext";
-import { getCards, getFortune } from "../../apiCalls";
-import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
+import ReadingContext from "../../contexts/ReadingContext";
+import { getCards, getFortune } from "../../apiCalls";
+import Card from "../Card";
 import Loading from "../Loading/Loading";
 import "./reading.scss";
 
@@ -17,19 +17,19 @@ export default function Reading() {
   const [fortune, setFortune] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
 
+  const fetchFortune = () => {
+    getFortune()
+      .then((res) => setFortune(res.content))
+      .catch((error) => console.log(error)); // eslint-disable-line
+  };
+
   React.useEffect(() => {
     getCards(spreadCount)
       .then((res) => setReadingCards(res.cards))
       .then(() => fetchFortune())
       .then(() => setIsLoading(false))
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error)); // eslint-disable-line
   }, []);
-
-  const fetchFortune = () => {
-    getFortune()
-      .then((fortune) => setFortune(fortune.content))
-      .catch((error) => console.log(error));
-  };
 
   const resetReading = () => {
     setQuestion("");

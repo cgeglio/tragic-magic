@@ -1,7 +1,7 @@
 import { Input, Select } from "antd";
 import React from "react";
 import { useHistory } from "react-router";
-import { ReadingContext } from "../../contexts/ReadingContext";
+import ReadingContext from "../../contexts/ReadingContext";
 import golden from "../../images/golden.png";
 import "./readingStarter.scss";
 
