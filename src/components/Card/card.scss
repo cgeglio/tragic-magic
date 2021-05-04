@@ -14,14 +14,14 @@
     height: 100%;
     position: absolute;
     width: 100%;
-  
+
     -moz-transform: scale(-1, 1);
     -webkit-transform: scale(-1, 1);
     -o-transform: scale(-1, 1);
     -ms-transform: scale(-1, 1);
     transform: scale(-1, 1);
   }
-  
+
   .card-details {
     color: black;
     font-weight: bold;
@@ -40,24 +40,24 @@
       background: transparent;
     }
   }
-  
+
   h3 {
     font-size: 0.8em;
   }
-  
+
   h4 {
     font-size: 0.6em;
     font-weight: bold;
     margin: 10px 0px 5px 0px;
     text-align: left;
   }
-  
+
   p {
     font-size: 0.6em;
     line-height: 1.3;
     text-align: left;
   }
-  
+
   .flip-card-inner {
     animation: change 2s ease forwards;
     animation-delay: 1s;
@@ -68,7 +68,7 @@
     transition: transform 0.5s;
     transform-style: preserve-3d;
   }
-  
+
   .flip-card-front,
   .flip-card-back {
     position: absolute;
@@ -77,24 +77,24 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
-  
+
   .flip-card-front {
     background-color: black;
     color: black;
     pointer-events: none;
     z-index: 7;
   }
-  
+
   .flip-card-back {
     transform: rotateY(180deg);
   }
-  
+
   .visible {
     visibility: visible;
     opacity: 1;
     transition: visibility 0s linear 0s, opacity 300ms;
   }
-  
+
   .hidden {
     visibility: hidden;
     opacity: 0;
