@@ -1,15 +1,16 @@
 import React from "react";
 import NavBar from "./components/NavBar";
 import AppSwitch from "./AppSwitch";
+import ReadingContext from "./contexts/ReadingContext";
 import "./App.scss";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <NavBar />
-      <AppSwitch />
+      <ReadingContext>
+        <AppSwitch />
+      </ReadingContext>
     </div>
   );
 }
-
-export default App;
