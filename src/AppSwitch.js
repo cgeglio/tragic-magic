@@ -4,15 +4,16 @@ import About from "./components/About";
 import Cards from "./components/Cards";
 import Reading from "./components/Reading";
 import ReadingStarter from "./components/ReadingStarter";
+import { paths } from "./paths";
 
 export default function AppSwitch() {
   return (
     <Switch>
-      <Route path="/about" component={About} />
-      <Route path="/cards" component={Cards} />
-      <Route path="/reading" component={Reading} />
-      <Route exact path="/" component={ReadingStarter} />
-      <Redirect to="/" />
+      <Route path={paths.about()} component={About} />
+      <Route path={paths.cards()} component={Cards} />
+      <Route path={paths.reading()} component={Reading} />
+      <Route exact path={paths.home()} component={ReadingStarter} />
+      <Redirect to={paths.home()} />
     </Switch>
   );
 }
