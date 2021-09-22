@@ -17,7 +17,9 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react", "prettier"],
-  rules: {},
+  rules: {
+    "no-console": 0,
+  },
   settings: {
     react: {
       version: "detect",

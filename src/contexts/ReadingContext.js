@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState, useContext, createContext } from "react";
+import PropTypes from "prop-types";
 
-const ReadingContext = React.createContext({
-  spreadCount: "",
-  question: "",
-  setSpreadCount: () => {},
-  setQuestion: () => {},
-});
+const ReadingContext = createContext();
 
-export default ReadingContext;
+export const useReadingContext = () => useContext(ReadingContext);
+
+export default function ReadingProvider({ children }) {
+  const [question, setQuestion] = useState("");
+  const [spreadCount, setSpreadCount] = useState(4);
+
+  const readingContext = () => ({
+    spreadCount,
+    question,
+    setSpreadCount,
+    setQuestion,
+  });
+
+  return (
+    <ReadingContext.Provider value={readingContext()}>
+      {children}
+    </ReadingContext.Provider>
+  );
+}
+
+ReadingProvider.propTypes = {
+  children: PropTypes.element,
+};

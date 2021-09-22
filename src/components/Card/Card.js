@@ -5,15 +5,18 @@ import "./card.scss";
 
 export default function Card({ card }) {
   const [isVisible, setIsVisible] = React.useState(false);
+  const { name, name_short: nameShort, meaning_up: meaning, desc } = card;
+  const imgSrc = `${process.env.PUBLIC_URL}/cardAssets/${nameShort}.jpg`;
+
   return (
-    <div className="card flip-card fade-in">
+    <article className="flip-card fade-in">
       <div className="flip-card-inner">
         <img
           style={{ opacity: isVisible ? "0.1" : 1 }}
-          src={`${process.env.PUBLIC_URL}/cardAssets/${card.name_short}.jpg`}
-          alt={card.name}
+          src={imgSrc}
+          alt={name}
           className="flip-card-back"
-          onMouseOver={() => setIsVisible(true)}
+          onMouseEnter={() => setIsVisible(true)}
         />
         {
           <div
@@ -21,17 +24,17 @@ export default function Card({ card }) {
             onMouseLeave={() => setIsVisible(false)}
           >
             <div className="card-details">
-              <h3>{card.name}</h3>
+              <h3>{name}</h3>
               <h4>Meaning:</h4>
-              <p>{card.meaning_up}</p>
+              <p>{meaning}</p>
               <h4>Description:</h4>
-              <p>{card.desc}</p>
+              <p>{desc}</p>
             </div>
           </div>
         }
         <img src={cardBack} alt="Tarot card back" className="flip-card-front" />
       </div>
-    </div>
+    </article>
   );
 }
 

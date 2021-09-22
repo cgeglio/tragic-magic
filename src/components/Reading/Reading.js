@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ReadingContext from "../../contexts/ReadingContext";
+import { useReadingContext } from "../../contexts/ReadingContext";
 import { getCards, getFortune } from "../../apiCalls";
-import Card from "../Card";
+import Card from "../Card/Card";
 import Loading from "../Loading/Loading";
 import "./reading.scss";
 
@@ -12,15 +12,15 @@ export default function Reading() {
     spreadCount,
     setQuestion,
     setSpreadCount,
-  } = React.useContext(ReadingContext);
+  } = useReadingContext();
   const [readingCards, setReadingCards] = React.useState([]);
   const [fortune, setFortune] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
 
   const fetchFortune = () => {
     getFortune()
-      .then((res) => setFortune(res.content))
-      .catch((error) => console.log(error)); // eslint-disable-line
+      .then((f) => setFortune(f.content))
+      .catch((error) => console.log(error));
   };
 
   React.useEffect(() => {
@@ -28,7 +28,7 @@ export default function Reading() {
       .then((res) => setReadingCards(res.cards))
       .then(() => fetchFortune())
       .then(() => setIsLoading(false))
-      .catch((error) => console.log(error)); // eslint-disable-line
+      .catch((error) => console.log(error));
   }, []);
 
   const resetReading = () => {

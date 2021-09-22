@@ -1,84 +1,91 @@
 @import "../../variables.scss";
 
-.reading-starter {
-  height: auto;
+.reading-starter-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 
-  .golden-text {
-    height: 180px;
-    margin-top: 100px;
-  }
+  .reading-starter {
+    height: auto;
 
-  .reading-starter-circle {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    .circle {
-      background-color: white;
-      border-radius: 50%;
-      height: 400px;
-      width: 400px;
+    .golden-text {
+      height: 180px;
+      margin-top: 100px;
     }
 
-    .inner-circle-content {
+    .reading-starter-circle {
       align-items: center;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      margin-top: 130px;
-      position: absolute;
+      justify-content: flex-start;
 
-      .ant-input {
-        background-color: black;
-        border: 0;
-        border-radius: 3px;
-        color: white;
-        font-size: 1em;
-        height: 50px;
-        margin-bottom: 20px;
-        text-indent: 0.8em;
-        width: 300px;
+      .circle {
+        background-color: white;
+        border-radius: 50%;
+        height: 400px;
+        width: 400px;
       }
 
-      .ask-btn {
-        background-color: black;
-        border: 0;
-        border-radius: 3px;
-        font-size: 1em;
-        height: 30px;
-        width: 180px;
+      .inner-circle-content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 130px;
+        position: absolute;
 
-        &:hover {
-          background-color: $primary-color;
-          color: black;
-          cursor: pointer;
-        }
-      }
-
-      .error-message {
-        margin-top: 155px;
-      }
-
-      .ant-select {
-        font-size: 0.9em !important;
-        height: 35px;
-        margin-bottom: 15px !important;
-        width: 200px;
-
-        .ant-select-selector {
-          background-color: black !important;
-        }
-
-        .ant-select-selection-item,
-        .ant-select-selection-placeholder,
-        .ant-select-arrow {
+        .ant-input {
+          background-color: black;
+          border: 0;
+          border-radius: 3px;
           color: white;
+          font-size: 1em;
+          height: 50px;
+          margin-bottom: 20px;
+          text-indent: 0.8em;
+          width: 300px;
         }
 
-        .ant-select-item-option:hover {
-          background-color: $primary-color !important;
+        .ask-btn {
+          background-color: black;
+          border: 0;
+          border-radius: 3px;
+          font-size: 1em;
+          height: 30px;
+          width: 180px;
+
+          &:hover {
+            background-color: $primary-color;
+            color: black;
+            cursor: pointer;
+          }
+        }
+
+        .error-message {
+          margin-top: 155px;
+        }
+
+        .ant-select {
+          font-size: 0.9em !important;
+          height: 35px;
+          margin-bottom: 15px !important;
+          width: 200px;
+
+          .ant-select-selector {
+            background-color: black !important;
+          }
+
+          .ant-select-selection-item,
+          .ant-select-selection-placeholder,
+          .ant-select-arrow {
+            color: white;
+          }
+
+          .ant-select-item-option:hover {
+            background-color: $primary-color !important;
+          }
         }
       }
     }

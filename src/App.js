@@ -4,20 +4,13 @@ import AppSwitch from "./AppSwitch";
 import ReadingContext from "./contexts/ReadingContext";
 import "./App.scss";
 
-function App() {
-  const [question, setQuestion] = React.useState("");
-  const [spreadCount, setSpreadCount] = React.useState("4");
-
+export default function App() {
   return (
     <div className="App">
       <NavBar />
-      <ReadingContext.Provider
-        value={{ spreadCount, question, setSpreadCount, setQuestion }}
-      >
+      <ReadingContext>
         <AppSwitch />
-      </ReadingContext.Provider>
+      </ReadingContext>
     </div>
   );
 }
-
-export default App;
