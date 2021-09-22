@@ -1,4 +1,5 @@
 import React, { useState, useContext, createContext } from "react";
+import PropTypes from "prop-types";
 
 const ReadingContext = createContext();
 
@@ -21,3 +22,7 @@ export default function ReadingProvider({ children }) {
     </ReadingContext.Provider>
   );
 }
+
+ReadingProvider.propTypes = {
+  children: PropTypes.element,
+};
