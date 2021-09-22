@@ -1,13 +1,15 @@
 import { Input, Select } from "antd";
 import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router-dom";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import golden from "../../images/golden.png";
-import { paths } from "../../paths";
+import paths from "../../paths";
 import "./readingStarter.scss";
 
 const { Option } = Select;
 
-export default function ReadingStarter() {
+function ReadingStarter({ history }) {
   const { question, setQuestion, setSpreadCount } = useReadingContext();
   const [errorMessage, setErrorMessage] = React.useState("");
 
@@ -17,7 +19,7 @@ export default function ReadingStarter() {
   const handleNewQuestion = (event) => setQuestion(event.target.value);
   const verifyQuestionInput = () =>
     question
-      ? (window.location.href = paths.reading())
+      ? history.push(paths.reading())
       : setErrorMessage("Please enter a question.");
 
   return (
@@ -48,3 +50,9 @@ export default function ReadingStarter() {
     </div>
   );
 }
+
+ReadingStarter.propTypes = {
+  history: PropTypes.object,
+};
+
+export default withRouter(ReadingStarter);

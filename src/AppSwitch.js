@@ -4,7 +4,7 @@ import About from "./components/About";
 import Cards from "./components/Cards";
 import Reading from "./components/Reading";
 import ReadingStarter from "./components/ReadingStarter";
-import { paths } from "./paths";
+import paths from "./paths";
 
 export default function AppSwitch() {
   return (
