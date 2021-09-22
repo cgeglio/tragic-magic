@@ -1,6 +1,5 @@
 import { Input, Select } from "antd";
 import React from "react";
-import { useHistory } from "react-router";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import golden from "../../images/golden.png";
 import "./readingStarter.scss";
@@ -8,11 +7,10 @@ import "./readingStarter.scss";
 const { Option } = Select;
 
 export default function ReadingStarter() {
-  const history = useHistory();
   const { question, setQuestion, setSpreadCount } = useReadingContext();
   const [errorMessage, setErrorMessage] = React.useState("");
 
-  const goToReading = () => history.push("/reading");
+  const goToReading = () => (window.location.href = "/reading");
 
   const handleSpreadCount = (value) => {
     setSpreadCount(value);
