@@ -2,6 +2,7 @@ import { Input, Select } from "antd";
 import React from "react";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import golden from "../../images/golden.png";
+import { paths } from "../../paths";
 import "./readingStarter.scss";
 
 const { Option } = Select;
@@ -10,14 +11,14 @@ export default function ReadingStarter() {
   const { question, setQuestion, setSpreadCount } = useReadingContext();
   const [errorMessage, setErrorMessage] = React.useState("");
 
-  const goToReading = () => (window.location.href = "/reading");
-
   const handleSpreadCount = (value) => {
     setSpreadCount(value);
   };
   const handleNewQuestion = (event) => setQuestion(event.target.value);
   const verifyQuestionInput = () =>
-    question ? goToReading() : setErrorMessage("Please enter a question.");
+    question
+      ? (window.location.href = paths.reading())
+      : setErrorMessage("Please enter a question.");
 
   return (
     <div className="reading-starter-container">
