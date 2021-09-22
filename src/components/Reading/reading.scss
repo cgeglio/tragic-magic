@@ -1,0 +1,52 @@
+@import "../../variables.scss";
+
+.card-container {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+}
+
+.question {
+  color: $primary-color;
+  margin-bottom: 25px;
+}
+
+.fortune {
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0px 40px 0px;
+}
+
+.reading-details {
+  display: flex;
+  flex-direction: row;
+}
+
+.save-icon {
+  height: 70px;
+}
+
+.save-btn {
+  background: none;
+  border: 0;
+  margin-right: 50px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#ask-another {
+  height: 35px;
+  width: 200px;
+}
+
+.card-container .back-btn {
+  margin-top: 40px;
+}
