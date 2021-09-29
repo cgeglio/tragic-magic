@@ -1,4 +1,4 @@
-import { Input, Select } from "antd";
+import { Button, Input, Select } from "antd";
 import React from "react";
 import PropTypes from "prop-types";
 import { withRouter } from "react-router-dom";
@@ -29,7 +29,12 @@ function ReadingStarter({ history }) {
         <div className="reading-starter-circle">
           <div className="circle" />
           <div className="inner-circle-content">
-            <Select onChange={handleSpreadCount} placeholder="Select a reading">
+            <Select
+              onChange={handleSpreadCount}
+              placeholder="Select a spread"
+              defaultValue={4}
+              dropdownClassName="spread-dropdown"
+            >
               <Option value={4}>4 Card Spread</Option>
               <Option value={3}>3 Card Spread</Option>
               <Option value={1}>1 Card Spread</Option>
@@ -40,10 +45,10 @@ function ReadingStarter({ history }) {
               value={question}
               onChange={handleNewQuestion}
             />
-            <button className="ask-btn" onClick={verifyQuestionInput}>
+            <Button className="ask-btn" onClick={verifyQuestionInput}>
               ASK THE CARDS
-            </button>
-            <p className="error-message">{errorMessage}</p>
+            </Button>
+            <div className="error-message">{errorMessage}</div>
           </div>
         </div>
       </div>
