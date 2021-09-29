@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Loading from "../../components/Loading/Loading";
+import Loading from "../Loading/Loading";
 import { getDeck } from "../../apiCalls";
-import Card from "../../components/Card/Card";
+import Card from "../Card/Card";
 import "./deck.scss";
 
 export default function Deck() {
