@@ -2,11 +2,11 @@
 
 .loading {
   display: flex;
-  position: relative;
+  justify-content: center;
+  width: 100%;
 
   .heartbeat {
-    height: 500px;
-    position: absolute;
+    height: 400px;
     -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
     animation: heartbeat 1.5s ease-in-out infinite both;
   }
