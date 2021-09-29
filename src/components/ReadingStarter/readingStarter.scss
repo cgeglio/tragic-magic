@@ -52,6 +52,7 @@
           background-color: black;
           border: 0;
           border-radius: 3px;
+          color: white;
           font-size: 1em;
           height: 30px;
           width: 180px;
@@ -72,22 +73,36 @@
           height: 35px;
           margin-bottom: 15px !important;
           width: 200px;
+        }
 
-          .ant-select-selector {
-            background-color: black !important;
-          }
+        .ant-select-selector {
+          background-color: black !important;
+        }
 
-          .ant-select-selection-item,
-          .ant-select-selection-placeholder,
-          .ant-select-arrow {
-            color: white;
-          }
-
-          .ant-select-item-option:hover {
-            background-color: $primary-color !important;
-          }
+        .ant-select-selection-item,
+        .ant-select-selection-placeholder,
+        .ant-select-arrow {
+          color: white;
         }
       }
+    }
+  }
+}
+
+.spread-dropdown {
+  min-height: 120px;
+
+  .ant-select-item-option-selected {
+    background-color: $primary-color !important;
+  }
+
+  .ant-select-item-option {
+    align-items: center;
+    display: flex;
+    height: 40px;
+
+    &:hover {
+      background-color: $secondary-color !important;
     }
   }
 }

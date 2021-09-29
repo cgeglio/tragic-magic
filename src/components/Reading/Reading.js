@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "antd";
 import { Link } from "react-router-dom";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import { getCards, getFortune } from "../../apiCalls";
@@ -7,12 +8,8 @@ import Loading from "../Loading/Loading";
 import "./reading.scss";
 
 export default function Reading() {
-  const {
-    question,
-    spreadCount,
-    setQuestion,
-    setSpreadCount,
-  } = useReadingContext();
+  const { question, spreadCount, resetReading } = useReadingContext();
+
   const [readingCards, setReadingCards] = React.useState([]);
   const [fortune, setFortune] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
@@ -31,11 +28,6 @@ export default function Reading() {
       .catch((error) => console.log(error));
   }, []);
 
-  const resetReading = () => {
-    setQuestion("");
-    setSpreadCount("");
-  };
-
   return isLoading ? (
     <Loading />
   ) : (
@@ -53,9 +45,9 @@ export default function Reading() {
         </div>
       </section>
       <Link to="/">
-        <button onClick={resetReading} id="ask-another" className="back-btn">
+        <Button onClick={resetReading} className="back-btn">
           Ask Another Question
-        </button>
+        </Button>
       </Link>
     </section>
   );

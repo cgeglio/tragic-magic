@@ -9,11 +9,17 @@ export default function ReadingProvider({ children }) {
   const [question, setQuestion] = useState("");
   const [spreadCount, setSpreadCount] = useState(4);
 
+  const resetReading = () => {
+    setQuestion("");
+    setSpreadCount(4);
+  };
+
   const readingContext = () => ({
     spreadCount,
     question,
     setSpreadCount,
     setQuestion,
+    resetReading,
   });
 
   return (

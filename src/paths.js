@@ -1,6 +1,6 @@
 const paths = {
   about: () => "/about",
-  cards: () => "/cards",
+  deck: () => "/deck",
   home: () => "/",
   reading: () => "/reading",
 };

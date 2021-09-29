@@ -1,0 +1,10 @@
+.deck {
+  padding: 20px;
+
+  .deck-cards {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}

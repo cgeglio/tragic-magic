@@ -32,21 +32,20 @@
   height: 70px;
 }
 
-.save-btn {
-  background: none;
-  border: 0;
-  margin-right: 50px;
+.back-btn {
+  background-color: $primary-color !important;
+  color: black;
+  border: 0 !important;
+  border-radius: 3px;
+  font-size: 1em;
+  height: 35px;
+  margin-top: 40px;
+  width: 200px;
 
   &:hover {
+    background-color: $secondary-color !important;
+    border: 0 !important;
+    color: black !important;
     cursor: pointer;
   }
-}
-
-#ask-another {
-  height: 35px;
-  width: 200px;
-}
-
-.card-container .back-btn {
-  margin-top: 40px;
 }
