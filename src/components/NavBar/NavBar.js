@@ -25,7 +25,7 @@ export default function NavBar() {
             <Link to="/about">About</Link>
           </div>
           <div className="nav-item">
-            <Link to="/cards">Cards</Link>
+            <Link to="/deck">Deck</Link>
           </div>
         </div>
       </nav>
