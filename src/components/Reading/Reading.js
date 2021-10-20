@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import { getCards, getFortune } from "../../apiCalls";
 import Card from "../Card/Card";
@@ -28,22 +29,29 @@ export default function Reading() {
       .catch((error) => console.log(error));
   }, []);
 
-  return isLoading ? (
-    <Loading />
-  ) : (
-    <section className="card-container fade-in">
-      <section className="cards">
-        {readingCards.length &&
-          readingCards.map((card) => {
-            return <Card key={card.name_short + card.value} card={card} />;
-          })}
-      </section>
+  const renderReadingDetails = () => {
+    return (
       <section className="reading-details">
         <div>
           <h2 className="question">{question}</h2>
           <h2 className="fortune">{fortune}</h2>
         </div>
       </section>
+    );
+  };
+
+  return isLoading ? (
+    <Loading />
+  ) : (
+    <section className="card-container fade-in">
+      {isMobile && renderReadingDetails()}
+      <section className="cards">
+        {readingCards.length &&
+          readingCards.map((card) => {
+            return <Card key={card.name_short + card.value} card={card} />;
+          })}
+      </section>
+      {!isMobile && renderReadingDetails()}
       <Link to="/">
         <Button onClick={resetReading} className="back-btn">
           Ask Another Question

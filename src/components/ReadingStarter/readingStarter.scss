@@ -106,3 +106,59 @@
     }
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .reading-starter-container {
+    .reading-starter {
+      .golden-text {
+        height: 80px;
+        margin-top: 30px;
+      }
+
+      .reading-starter-circle {
+        .circle {
+          height: 320px;
+          width: 320px;
+        }
+
+        .inner-circle-content {
+          margin-top: 80px;
+
+          .ant-input {
+            width: 250px;
+          }
+
+          .ask-btn {
+            height: 50px;
+            width: 180px;
+          }
+
+          .error-message {
+            margin-top: 115px;
+          }
+
+          .ant-select {
+            height: 50px;
+            margin-bottom: 15px !important;
+            width: 200px;
+          }
+
+          .ant-select-selector {
+            height: 48px;
+            padding-top: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .spread-dropdown {
+    min-height: 140px;
+
+    .ant-select-item-option-selected {
+      .ant-select-item-option {
+        height: 45px;
+      }
+    }
+  }
+}

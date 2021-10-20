@@ -9,7 +9,9 @@ export default function About() {
       "//instafeed.assets.pxlecdn.com/assets/pixlee_widget_1_0_0.js";
 
     window.PixleeAsyncInit = () => {
+      // eslint-disable-next-line
       Pixlee.init({ apiKey: "NJWdePYiYgv19uHgeCg1" });
+      // eslint-disable-next-line
       Pixlee.addSimpleWidget({ widgetId: "34712" });
     };
 
@@ -22,5 +24,10 @@ export default function About() {
     };
   }, []);
 
-  return <div className="about">Created by Carla Geglio</div>;
+  return (
+    <div className="about">
+      <div>Created by Carla Geglio.</div>
+      <div>Just for fun.</div>
+    </div>
+  );
 }

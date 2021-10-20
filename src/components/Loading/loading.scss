@@ -81,3 +81,13 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .loading {
+    margin-top: 100px;
+
+    .heartbeat {
+      height: 200px;
+    }
+  }
+}
