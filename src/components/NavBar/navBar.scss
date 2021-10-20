@@ -1,19 +1,22 @@
+@import "../../variables.scss";
+
 .app-name {
-  font-family: "Bungee Shade", sans-serif;
+  font-family: "Bungee Inline", sans-serif;
   font-size: 28px;
   margin-left: 20px;
 }
 
-.nav-item {
-  a {
-    color: #fff;
-    padding-right: 20px;
-    text-decoration: none;
+a {
+  color: #fff !important;
 
-    &:hover {
-      color: #cbc3e3;
-    }
+  &:hover {
+    color: #cbc3e3;
   }
+}
+
+.nav-item {
+  padding-right: 30px;
+  text-decoration: none;
 }
 
 nav {
@@ -141,21 +144,26 @@ nav {
     position: absolute;
     top: 70px;
     width: 100%;
+    z-index: 1000;
 
     .nav-items {
       flex-direction: column;
     }
 
+    a {
+      color: #000 !important;
+
+      &:hover {
+        background-color: $secondary-color !important;
+        color: #000;
+      }
+    }
+
     .nav-item {
       border-bottom: 1px solid lightgray;
       height: 60px;
-      margin: 0 5%;
-      padding: 15px 0 0 0;
-      width: 90%;
-
-      a {
-        color: #000;
-      }
+      padding: 15px 0 0 25px;
+      width: 100%;
     }
   }
 }

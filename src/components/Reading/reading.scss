@@ -6,46 +6,63 @@
   display: flex;
   flex-direction: column;
   height: auto;
-}
 
-.question {
-  color: $primary-color;
-  margin-bottom: 25px;
-}
+  .cards {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0px 40px 0px;
+  }
 
-.fortune {
-  color: white;
-}
+  .reading-details {
+    display: flex;
+    flex-direction: row;
+    max-width: 90%;
 
-.cards {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 0px 40px 0px;
-}
+    .question {
+      color: $primary-color;
+      margin-bottom: 25px;
+    }
 
-.reading-details {
-  display: flex;
-  flex-direction: row;
-}
+    .fortune {
+      color: white;
+    }
+  }
 
-.save-icon {
-  height: 70px;
-}
-
-.back-btn {
-  background-color: $primary-color !important;
-  color: black;
-  border: 0 !important;
-  border-radius: 3px;
-  font-size: 1em;
-  height: 35px;
-  margin-top: 40px;
-  width: 200px;
-
-  &:hover {
-    background-color: $secondary-color !important;
+  .back-btn {
+    background-color: $primary-color !important;
+    color: black;
     border: 0 !important;
-    color: black !important;
-    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1em;
+    height: 35px;
+    margin-top: 40px;
+    width: 200px;
+
+    &:hover {
+      background-color: $secondary-color !important;
+      border: 0 !important;
+      color: black !important;
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .card-container {
+    .cards {
+      flex-direction: column;
+      margin-bottom: 0;
+    }
+
+    .reading-details {
+      flex-direction: column;
+      font-size: 12px;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .back-btn {
+      margin: 25px 0;
+    }
   }
 }

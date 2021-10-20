@@ -26,3 +26,16 @@ body {
     }
   }
 }
+
+@media only screen and (max-width: 960px) {
+  body {
+    #pixlee_container {
+      padding-top: 30px;
+
+      iframe {
+        padding: 10px;
+        width: 80% !important;
+      }
+    }
+  }
+}

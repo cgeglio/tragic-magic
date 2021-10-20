@@ -13,20 +13,20 @@ export default function NavBar() {
     return (
       <nav onClick={toggleIsActive}>
         {!isMobile && (
-          <div className="nav-item app-name">
-            <Link to="/">Tragic Magic</Link>
-          </div>
+          <Link className="nav-item app-name" to="/">
+            Tragic Magic
+          </Link>
         )}
         <div className="nav-items">
-          <div className="nav-item">
-            <Link to="/">Home</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/about">About</Link>
-          </div>
-          <div className="nav-item">
-            <Link to="/deck">Deck</Link>
-          </div>
+          <Link className="nav-item" to="/">
+            Home
+          </Link>
+          <Link className="nav-item" to="/about">
+            About
+          </Link>
+          <Link className="nav-item" to="/deck">
+            Deck
+          </Link>
         </div>
       </nav>
     );
