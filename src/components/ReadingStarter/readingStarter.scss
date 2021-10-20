@@ -12,7 +12,7 @@
 
     .golden-text {
       height: 180px;
-      margin-top: 100px;
+      position: relative;
     }
 
     .reading-starter-circle {
@@ -21,11 +21,9 @@
       flex-direction: column;
       justify-content: flex-start;
 
-      .circle {
-        background-color: white;
-        border-radius: 50%;
-        height: 400px;
-        width: 400px;
+      .crystal {
+        height: 680px;
+        margin-top: -100px;
       }
 
       .inner-circle-content {
@@ -33,7 +31,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin-top: 130px;
+        margin-top: 270px;
         position: absolute;
 
         .ant-input {
@@ -45,7 +43,7 @@
           height: 50px;
           margin-bottom: 20px;
           text-indent: 0.8em;
-          width: 300px;
+          width: 270px;
         }
 
         .ask-btn {
@@ -65,7 +63,8 @@
         }
 
         .error-message {
-          margin-top: 155px;
+          font-size: 18px;
+          margin-top: 190px;
         }
 
         .ant-select {
@@ -107,22 +106,21 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 749px) and (max-width: 800px) {
   .reading-starter-container {
     .reading-starter {
       .golden-text {
-        height: 80px;
-        margin-top: 30px;
+        height: 140px;
       }
 
       .reading-starter-circle {
-        .circle {
-          height: 320px;
-          width: 320px;
+        .crystal {
+          margin-top: -40px;
+          height: 620px;
         }
 
         .inner-circle-content {
-          margin-top: 80px;
+          margin-top: 275px;
 
           .ant-input {
             width: 250px;
@@ -134,7 +132,7 @@
           }
 
           .error-message {
-            margin-top: 115px;
+            margin-top: 140px;
           }
 
           .ant-select {
@@ -158,6 +156,36 @@
     .ant-select-item-option-selected {
       .ant-select-item-option {
         height: 45px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .reading-starter-container {
+    margin-top: 70px;
+
+    .reading-starter {
+      .golden-text {
+        height: 90px;
+        top: 20px;
+      }
+
+      .reading-starter-circle {
+        .crystal {
+          display: none;
+        }
+
+        .circle {
+          background-color: white;
+          border-radius: 50%;
+          height: 320px;
+          width: 320px;
+        }
+
+        .inner-circle-content {
+          margin-top: 70px;
+        }
       }
     }
   }
