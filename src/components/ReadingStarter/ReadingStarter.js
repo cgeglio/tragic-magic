@@ -5,6 +5,7 @@ import { withRouter } from "react-router-dom";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import golden from "../../images/golden.png";
 import paths from "../../paths";
+import crystal from "../../images/crystal.png";
 import "./readingStarter.scss";
 
 const { Option } = Select;
@@ -27,6 +28,7 @@ function ReadingStarter({ history }) {
       <div className="reading-starter fade-in">
         <img src={golden} alt="The Future Is Golden" className="golden-text" />
         <div className="reading-starter-circle">
+          <img src={crystal} className="crystal" />
           <div className="circle" />
           <div className="inner-circle-content">
             <Select
