@@ -6,6 +6,7 @@ import { useReadingContext } from "../../contexts/ReadingContext";
 import { getCards, getFortune } from "../../apiCalls";
 import Card from "../Card/Card";
 import Loading from "../Loading/Loading";
+import paths from "../../paths";
 import "./reading.scss";
 
 export default function Reading() {
@@ -53,7 +54,7 @@ export default function Reading() {
           })}
       </section>
       {!isMobile && renderReadingDetails()}
-      <Link to="/">
+      <Link to={paths.home()}>
         <Button onClick={resetReading} className="back-btn">
           Ask Another Question
         </Button>
