@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { isMobile } from "react-device-detect";
 import Hamburger from "react-hamburgers";
+import useIsMobile from "../../hooks/useIsMobile";
 import "./navBar.scss";
 
 export default function NavBar() {
+  const isMobile = useIsMobile();
   const [isActive, setIsActive] = React.useState(false);
-
   const toggleIsActive = () => setIsActive((prev) => !prev);
 
   const renderMenu = () => {
