@@ -29,6 +29,8 @@ export default function Reading() {
       .then(() => fetchFortune())
       .then(() => setIsLoading(false))
       .catch((error) => console.log(error));
+
+    return setReadingCards([]);
   }, []);
 
   const renderReadingDetails = () => {
@@ -48,7 +50,7 @@ export default function Reading() {
     <section className="card-container fade-in">
       {isMobile && renderReadingDetails()}
       <section className="cards">
-        {readingCards.length &&
+        {readingCards.length > 0 &&
           readingCards.map((card) => {
             return <Card key={card.name_short + card.value} card={card} />;
           })}
