@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Image } from "antd";
-import cardBack from "../../images/cardBack.jpeg";
+import cardBack from "../../images/card-back-01.png";
 import "./card.scss";
 
 export default function Card({ card }) {
