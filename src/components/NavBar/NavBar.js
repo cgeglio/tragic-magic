@@ -18,6 +18,10 @@ export default function NavBar() {
     }
   };
 
+  const renderUnderlay = () => (
+    <div className="underlay" onClick={toggleIsActive}></div>
+  );
+
   const renderMenu = () => {
     return (
       <nav onClick={toggleIsActive}>
@@ -51,6 +55,7 @@ export default function NavBar() {
 
   return isMobile ? (
     <>
+      {isActive && renderUnderlay()}
       <div className="mobile-nav-container">
         <div className="nav-item app-name">
           <Link to={paths.home()} onClick={handleReturnToHome}>

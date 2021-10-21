@@ -119,6 +119,8 @@
     .flip-card-inner {
       .flip-card-back {
         .ant-image {
+          cursor: pointer;
+
           &:active {
             pointer-events: initial;
           }
