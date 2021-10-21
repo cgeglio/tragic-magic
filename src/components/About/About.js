@@ -10,7 +10,7 @@ export default function About() {
 
     window.PixleeAsyncInit = () => {
       // eslint-disable-next-line
-      Pixlee.init({ apiKey: "NJWdePYiYgv19uHgeCg1" });
+      Pixlee.init({ apiKey: process.env.REACT_APP_PIXLEE_KEY });
       // eslint-disable-next-line
       Pixlee.addSimpleWidget({ widgetId: "34712" });
     };
