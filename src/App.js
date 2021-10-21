@@ -7,8 +7,10 @@ export default function App() {
   return (
     <div className="app">
       <ReadingContext>
-        <NavBar />
-        <AppSwitch />
+        <>
+          <NavBar />
+          <AppSwitch />
+        </>
       </ReadingContext>
     </div>
   );

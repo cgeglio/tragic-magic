@@ -136,6 +136,12 @@ nav {
     }
   }
 
+  .underlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
   nav {
     align-items: initial;
     background-color: #fff;
@@ -155,7 +161,7 @@ nav {
 
       &:hover {
         background-color: $secondary-color !important;
-        color: #000;
+        color: #000 !important;
       }
     }
 

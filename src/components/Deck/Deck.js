@@ -11,6 +11,8 @@ export default function Deck() {
     getDeck()
       .then((res) => setDeck(res.cards))
       .catch((error) => console.log(error));
+
+    return setDeck([]);
   }, []);
 
   const getCards = () => {
