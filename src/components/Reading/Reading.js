@@ -1,14 +1,16 @@
 import React from "react";
 import { Button } from "antd";
 import { Link } from "react-router-dom";
-import { isMobile } from "react-device-detect";
+import useIsMobile from "../../hooks/useIsMobile";
 import { useReadingContext } from "../../contexts/ReadingContext";
 import { getCards, getFortune } from "../../apiCalls";
 import Card from "../Card/Card";
 import Loading from "../Loading/Loading";
+import paths from "../../paths";
 import "./reading.scss";
 
 export default function Reading() {
+  const isMobile = useIsMobile();
   const { question, spreadCount, resetReading } = useReadingContext();
 
   const [readingCards, setReadingCards] = React.useState([]);
@@ -52,7 +54,7 @@ export default function Reading() {
           })}
       </section>
       {!isMobile && renderReadingDetails()}
-      <Link to="/">
+      <Link to={paths.home()}>
         <Button onClick={resetReading} className="back-btn">
           Ask Another Question
         </Button>

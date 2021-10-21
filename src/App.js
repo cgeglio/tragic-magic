@@ -6,8 +6,8 @@ import ReadingContext from "./contexts/ReadingContext";
 export default function App() {
   return (
     <div className="app">
-      <NavBar />
       <ReadingContext>
+        <NavBar />
         <AppSwitch />
       </ReadingContext>
     </div>
