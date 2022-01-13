@@ -19,11 +19,12 @@ export default function Deck() {
     return (
       <div className="deck-cards">
         {deck.map((card, i) => (
-          <Card
+          <div
             key={card.name_short + card.name_short}
-            card={card}
-            number={i}
-          />
+            className="card-container"
+          >
+            <Card card={card} number={i} />
+          </div>
         ))}
       </div>
     );
