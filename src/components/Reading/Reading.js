@@ -44,7 +44,7 @@ export default function Reading() {
     );
   };
 
-  return isLoading ? (
+  return isLoading || !readingCards.length ? (
     <Loading />
   ) : (
     <section className="card-container fade-in">
