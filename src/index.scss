@@ -16,26 +16,4 @@ body {
   .app {
     width: 100%;
   }
-
-  #pixlee_container {
-    text-align: center;
-    padding-bottom: 50px;
-
-    iframe {
-      padding: 100px;
-    }
-  }
-}
-
-@media only screen and (max-width: 960px) {
-  body {
-    #pixlee_container {
-      padding-top: 30px;
-
-      iframe {
-        padding: 10px;
-        width: 80% !important;
-      }
-    }
-  }
 }
