@@ -28,8 +28,6 @@
     "lint": "eslint src/",
     "prepare": "husky install",
     "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\"",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
