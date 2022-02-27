@@ -1,4 +1,5 @@
 {
+  "homepage": "https://cgeglio.github.io/tragic-magic",
   "name": "tragic-magic",
   "version": "0.1.0",
   "private": true,
@@ -59,7 +60,6 @@
   "bugs": {
     "url": "https://github.com/cgeglio/tragic-magic/issues"
   },
-  "homepage": "https://tragicmagic.org",
   "devDependencies": {
     "eslint": "^7.24.0",
     "eslint-config-airbnb": "^18.2.1",
