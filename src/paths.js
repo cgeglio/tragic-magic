@@ -1,8 +1,8 @@
 const paths = {
-  about: () => "/tragic-magic/about",
-  deck: () => "/tragic-magic/deck",
-  home: () => "/tragic-magic",
-  reading: () => "/tragic-magic/reading",
+  about: () => "/about",
+  deck: () => "/deck",
+  home: () => "/",
+  reading: () => "/reading",
 };
 
 export { paths as default };
