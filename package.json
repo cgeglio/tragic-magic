@@ -1,4 +1,5 @@
 {
+  "homepage": "http://cgeglio.github.io/tragic-magic",
   "name": "tragic-magic",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +27,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint src/",
     "prepare": "husky install",
-    "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\""
+    "format": "prettier --write \"src/**/*.{js,jsx,css,scss}\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -57,13 +60,13 @@
   "bugs": {
     "url": "https://github.com/cgeglio/tragic-magic/issues"
   },
-  "homepage": "https://tragicmagic.org",
   "devDependencies": {
     "eslint": "^7.24.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.2",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.0",
     "lint-staged": "^10.5.4",
     "prettier": "2.2.1",
